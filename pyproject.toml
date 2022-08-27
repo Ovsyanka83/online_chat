@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Stanislav Zmiev <szmiev2000@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1"
+djangorestframework = "^3.13.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+pyupgrade = "^2.37.3"
+autoflake = "^1.4"
+bandit = { version = "^1.7.4", extras = ["toml"] }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+skip_gitignore = true
+skip_glob = ["**/tests/*"]
+line_length = 120
+lines_between_sections = 1
+
+[tool.black]
+line-length = 120
+target_version = ['py310']
+
+[tool.bandit]
+exclude_dirs = ["**/tests/*"]
+skips = ["B104"]

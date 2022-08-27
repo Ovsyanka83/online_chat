@@ -1,0 +1,10 @@
+{
+    "name": "chat-oatmeal-cc",
+    "scripts": {
+        "preinstall": "poetry install && (cd frontend && npm i)",
+        "start": "concurrently 'poetry run python manage.py runserver' 'cd frontend && npm start'"
+    },
+    "dependencies": {
+        "concurrently": "^7.3.0"
+    }
+}
