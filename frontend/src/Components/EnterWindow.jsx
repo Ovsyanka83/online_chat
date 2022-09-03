@@ -1,30 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
 import MyButton from './UI/Button/MyButton';
+import MyInput from './UI/Input/MyInput';
+
 
 
 const EnterWindow = () => {
-    const [username, setUsername] = useState('username');
+    const [username, setUsername] = useState('');
+    console.log(username)
     return (
         <div className='loginWindow'>
-
-            <div className='flexBox'>
-
-                <div class="input-group flex-nowrap">
-                    <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter your name"
-                        aria-label="Имя пользователя"
-                        aria-describedby="addon-wrapping"
-                        value={username}
-                        onChange={event => setUsername(event.target.value)} />
-                </div>
-
-
-                <MyButton />
-            </div>
+            <MyInput />
+            <MyButton />
         </div>
+
     );
 };
 
