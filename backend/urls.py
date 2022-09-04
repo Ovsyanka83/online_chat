@@ -22,7 +22,7 @@ from rest_framework import permissions, routers
 from backend.chat import views
 
 router = routers.DefaultRouter()
-router.register(r"ping", views.PingViewSet, basename="ping")
+router.register(r"create_user", views.CreateUserAPI.as_view({'post': 'create'}), basename="create_user")
 
 schema_view = get_schema_view(
     openapi.Info(
