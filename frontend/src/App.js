@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import EnterWindow from './Components/EnterWindow';
 import MyButton from './Components/UI/Button/MyButton';
 import MyInput from './Components/UI/Input/MyInput';
 
@@ -10,13 +11,7 @@ function App() {
   console.log(username)
 
   return (
-    <div className='loginWindow '>
-      <div className='flexBox'>
-        <MyInput />
-        <MyButton />
-      </div>
-    </div>
-
+    <EnterWindow />
   );
 }
 

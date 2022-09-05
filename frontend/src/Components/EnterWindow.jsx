@@ -10,8 +10,10 @@ const EnterWindow = () => {
     console.log(username)
     return (
         <div className='loginWindow'>
-            <MyInput />
-            <MyButton />
+            <div className='flexBox'>
+                <MyInput />
+                <MyButton />
+            </div>
         </div>
 
     );
