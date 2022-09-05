@@ -3,11 +3,10 @@ import { useState } from 'react';
 import classes from "./MyInput.module.css"
 
 const MyInput = (props) => {
-    const [username, setUsername] = useState('username');
+    const [username, setUsername] = useState('');
+    console.log(username)
     return (
-
-
-        <div class="input-group flex-nowrap">
+        <div class="input-group flex-nowrap margin_element_name">
             <input
                 type="text"
                 class="form-control"
@@ -17,6 +16,8 @@ const MyInput = (props) => {
                 value={username}
                 onChange={event => setUsername(event.target.value)} />
         </div>
+
+
     );
 };
 

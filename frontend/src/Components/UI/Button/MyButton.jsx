@@ -16,7 +16,7 @@ const MyButton = (props) => {
     return (
 
         <div>
-            <button type="button" class="btn btn-info" onClick={handleSubmit}>Ok</button>
+            <button type="button" class="btn btn-info margin_element_name" onClick={handleSubmit}>Ok</button>
         </div>
     );
 };
