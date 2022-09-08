@@ -7,8 +7,14 @@ import MyInput from './Components/UI/Input/MyInput';
 
 
 function App() {
+
   const [username, setUsername] = useState('');
   console.log(username)
+
+
+
+
+
 
   return (
     <EnterWindow />
