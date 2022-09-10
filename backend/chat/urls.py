@@ -5,4 +5,4 @@ from .views import ChatViewSet
 router = SimpleRouter()
 router.register("chat", ChatViewSet)
 
-urlpatterns = [path("api/", include(router.urls))]
+urlpatterns = [path("", include(router.urls))]
