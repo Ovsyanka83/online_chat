@@ -11,11 +11,6 @@ function App() {
   const [username, setUsername] = useState('');
   console.log(username)
 
-
-
-
-
-
   return (
     <EnterWindow />
   );
