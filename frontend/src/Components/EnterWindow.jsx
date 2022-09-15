@@ -8,17 +8,17 @@ import MyInput from './UI/Input/MyInput';
 
 const EnterWindow = () => {
 
-    const [username, setUsername] = useState('');
-    const handleNameChange = (username) => {
-        setUsername(username)
+    const [nickname, setnickname] = useState('');
+    const handleNameChange = (nickname) => {
+        setnickname(nickname)
     }
 
     return (
         <div className='loginWindow'>
             <div className='flexBox'>
-                {/* transfer of components */}
+
                 <MyInput onChange={handleNameChange} />
-                <MyButton username={{ username }} />
+                <MyButton nickname={{ nickname }} />
 
             </div>
         </div>

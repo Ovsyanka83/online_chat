@@ -3,14 +3,14 @@ import classes from './MyButton.module.css'
 
 
 
-const MyButton = ({ username }) => {
+const MyButton = ({ nickname }) => {
 
 
 
-    //transfer to the server
+
     function submitHandler() {
-        console.log('Проверка работы функции')
-        console.log({ username })
+
+
         fetch(`http://Localhost:3000/chat`, {
             method: "POST",
             headers: {
@@ -18,11 +18,9 @@ const MyButton = ({ username }) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: { username }
+                name: { nickname }
             }),
         })
-        // .then(response => response.json())
-        // .then(json => console.log('', json))
 
     }
 

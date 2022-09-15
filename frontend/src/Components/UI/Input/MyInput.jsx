@@ -4,7 +4,7 @@ import classes from "./MyInput.module.css"
 
 const MyInput = ({ onChange }) => {
 
-    // submit from form
+
     const handleNameChange = (event) => {
         onChange(event.target.value)
     }
