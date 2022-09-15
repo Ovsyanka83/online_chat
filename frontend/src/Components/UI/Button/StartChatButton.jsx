@@ -1,16 +1,11 @@
 import React from 'react';
-import classes from './MyButton.module.css'
+import classes from './StartChatButton.module.css'
 
 
 
-const MyButton = ({ nickname }) => {
-
-
-
+const StartChatButton = ({ nickname }) => {
 
     function submitHandler() {
-
-
         fetch(`http://Localhost:3000/chat`, {
             method: "POST",
             headers: {
@@ -23,10 +18,6 @@ const MyButton = ({ nickname }) => {
         })
 
     }
-
-
-
-
     return (
 
         <div>
@@ -35,4 +26,4 @@ const MyButton = ({ nickname }) => {
     );
 };
 
-export default MyButton;
+export default StartChatButton;

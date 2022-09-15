@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import MyButton from './UI/Button/MyButton';
-import MyInput from './UI/Input/MyInput';
+import StartChatButton from './UI/Button/StartChatButton';
+import NicknameInput from './UI/Input/NicknameInput';
 
 
 
@@ -17,8 +17,8 @@ const EnterWindow = () => {
         <div className='loginWindow'>
             <div className='flexBox'>
 
-                <MyInput onChange={handleNameChange} />
-                <MyButton nickname={{ nickname }} />
+                <NicknameInput onChange={handleNameChange} />
+                <StartChatButton nickname={{ nickname }} />
 
             </div>
         </div>

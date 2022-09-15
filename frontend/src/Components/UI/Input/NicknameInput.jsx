@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import classes from "./MyInput.module.css"
+import classes from "./NicknameInput.module.css"
 
-const MyInput = ({ onChange }) => {
+const NicknameInput = ({ onChange }) => {
 
 
     const handleNameChange = (event) => {
@@ -25,4 +25,4 @@ const MyInput = ({ onChange }) => {
     );
 };
 
-export default MyInput;
+export default NicknameInput;

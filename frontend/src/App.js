@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { useState } from 'react';
 import EnterWindow from './Components/EnterWindow';
-import MyButton from './Components/UI/Button/MyButton';
-import MyInput from './Components/UI/Input/MyInput';
+import StartChatButton from './Components/UI/Button/StartChatButton';
+import NicknameInput from './Components/UI/Input/NicknameInput';
 
 
 
