@@ -2,19 +2,25 @@ import React from 'react';
 import { useState } from 'react';
 import classes from "./MyInput.module.css"
 
-const MyInput = (props) => {
+const MyInput = ({ onChange }) => {
     const [username, setUsername] = useState('');
     console.log(username)
+
+    const handleNameChange = (event) => {
+        onChange(event.target.value)
+    }
     return (
-        <div class="input-group flex-nowrap margin_element_name">
+        <div className="input-group flex-nowrap margin_element_name">
             <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Enter your name"
                 aria-label="Имя пользователя"
                 aria-describedby="addon-wrapping"
                 value={username}
-                onChange={event => setUsername(event.target.value)} />
+
+                onChange={handleNameChange}
+            />
         </div>
 
 

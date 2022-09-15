@@ -7,17 +7,25 @@ import MyInput from './UI/Input/MyInput';
 
 
 const EnterWindow = () => {
+
     const [username, setUsername] = useState('');
-    console.log(username)
+
+
+    const handleNameChange = (username) => {
+        setUsername(username)
+    }
+
     return (
         <div className='loginWindow'>
             <div className='flexBox'>
-                <MyInput />
-                <MyButton />
+                <MyInput onChange={handleNameChange} />
+                <MyButton username={{ username }} />
+
             </div>
         </div>
 
     );
 };
+
 
 export default EnterWindow;

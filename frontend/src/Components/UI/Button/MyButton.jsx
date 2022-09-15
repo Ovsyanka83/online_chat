@@ -1,33 +1,28 @@
 import React from 'react';
 import classes from './MyButton.module.css'
-import axios from 'axios';
 
 
-const MyButton = (props) => {
-    const handleSubmit = event => {
-        axios.get(`http://localhost:8000/ping/83`)
-            .then(res => {
-                console.log(res.data);
-            })
-        event.preventDefault();
-    }
 
+const MyButton = ({ username }) => {
 
-    function submitHandler(event) {
-        event.preventDefault()
-        console.log('123')
-        fetch(`Localhost:3000/chat`, {
+    function submitHandler() {
+        console.log('Проверка работы функции')
+        console.log({ username })
+
+        fetch(`http://Localhost:3000/chat`, {
             method: "POST",
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: 'fake name'
+                name: { username }
+
             }),
+
         })
-            .then(response => response.json())
-            .then(json => console.log('Тут хочу получить json, но ничего не приходит', json))
+        // .then(response => response.json())
+        // .then(json => console.log('', json))
 
     }
 
@@ -37,7 +32,8 @@ const MyButton = (props) => {
     return (
 
         <div>
-            <button type="button" class="btn btn-info margin_element_name" onClick={() => { handleSubmit(); submitHandler(); }}>Ok</button>
+            <button type="button" className="btn btn-info margin_element_name" onClick={submitHandler}>Ok</button>
+            {/* <span>{username}</span> */}
         </div>
     );
 };
