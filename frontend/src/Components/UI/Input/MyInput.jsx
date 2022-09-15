@@ -3,12 +3,12 @@ import { useState } from 'react';
 import classes from "./MyInput.module.css"
 
 const MyInput = ({ onChange }) => {
-    const [username, setUsername] = useState('');
-    console.log(username)
 
+    // submit from form
     const handleNameChange = (event) => {
         onChange(event.target.value)
     }
+
     return (
         <div className="input-group flex-nowrap margin_element_name">
             <input
@@ -17,8 +17,6 @@ const MyInput = ({ onChange }) => {
                 placeholder="Enter your name"
                 aria-label="Имя пользователя"
                 aria-describedby="addon-wrapping"
-                value={username}
-
                 onChange={handleNameChange}
             />
         </div>

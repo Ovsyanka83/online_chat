@@ -5,10 +5,12 @@ import classes from './MyButton.module.css'
 
 const MyButton = ({ username }) => {
 
+
+
+    //transfer to the server
     function submitHandler() {
         console.log('Проверка работы функции')
         console.log({ username })
-
         fetch(`http://Localhost:3000/chat`, {
             method: "POST",
             headers: {
@@ -17,9 +19,7 @@ const MyButton = ({ username }) => {
             },
             body: JSON.stringify({
                 name: { username }
-
             }),
-
         })
         // .then(response => response.json())
         // .then(json => console.log('', json))
@@ -33,7 +33,6 @@ const MyButton = ({ username }) => {
 
         <div>
             <button type="button" className="btn btn-info margin_element_name" onClick={submitHandler}>Ok</button>
-            {/* <span>{username}</span> */}
         </div>
     );
 };
