@@ -13,7 +13,7 @@ const StartChatButton = ({ nickname }) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: { nickname }
+                nickname: { nickname }
             }),
         })
 
