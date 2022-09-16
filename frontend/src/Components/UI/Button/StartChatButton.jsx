@@ -1,12 +1,13 @@
 import React from 'react';
-import classes from './StartChatButton.module.css'
+
 
 
 
 const StartChatButton = ({ nickname }) => {
 
     function submitHandler() {
-        fetch(`http://Localhost:3000/chat`, {
+
+        fetch(`http://Localhost:8000/chat/`, {
             method: "POST",
             headers: {
                 Accept: 'application/json',
