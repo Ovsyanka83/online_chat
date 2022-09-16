@@ -5,18 +5,22 @@ import React from 'react';
 
 const StartChatButton = ({ nickname }) => {
 
+
     function submitHandler() {
 
-        fetch(`http://Localhost:8000/chat/`, {
+        fetch('http://Localhost:8000/chat/', {
+
             method: "POST",
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                nickname: { nickname }
-            }),
+            body: JSON.stringify({ nickname }),
+
+
         })
+
+
 
     }
     return (

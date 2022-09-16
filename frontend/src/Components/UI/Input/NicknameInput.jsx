@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
-import classes from "./NicknameInput.module.css"
+
 
 const NicknameInput = ({ onChange }) => {
 
