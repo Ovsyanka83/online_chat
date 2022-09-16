@@ -17,12 +17,8 @@ from django.contrib import admin
 from django.urls import include, path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
-from rest_framework import permissions, routers
+from rest_framework import permissions
 
-from backend.chat import views
-
-router = routers.DefaultRouter()
-router.register(r"ping", views.PingViewSet, basename="ping")
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -35,12 +31,11 @@ schema_view = get_schema_view(
     permission_classes=[permissions.AllowAny],
 )
 
+
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path("", include(router.urls)),
+    path("", include("backend.chat.urls")),
     path("swagger", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     path("admin/", admin.site.urls),
 ]
-
-urlpatterns += router.urls

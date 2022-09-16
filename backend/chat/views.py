@@ -1,8 +1,8 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from rest_framework.response import Response
+from .serializers import UserSerializer
+from .models import User
 
 
-class PingViewSet(viewsets.ViewSet):
-    def retrieve(self, request, pk=None):
-        return Response({"ping": "ping"})
+class ChatViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
