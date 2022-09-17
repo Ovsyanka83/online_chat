@@ -1,27 +1,44 @@
 import React from 'react';
-import classes from './StartChatButton.module.css'
+import { useState } from 'react';
+import './StartChatButton.module.css'
+import 'animate.css';
+
+
 
 
 
 const StartChatButton = ({ nickname }) => {
+    const [isPostsLoading, setisPostsLoading] = useState(false)
+
+
 
     function submitHandler() {
-        fetch(`http://Localhost:3000/chat`, {
+        setisPostsLoading(true);
+
+
+
+        fetch('http://Localhost:8000/chat/', {
             method: "POST",
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                nickname: { nickname }
-            }),
+            body: JSON.stringify({ nickname }),
         })
+        setisPostsLoading(false);
+
 
     }
     return (
 
         <div>
-            <button type="button" className="btn btn-info margin_element_name" onClick={submitHandler}>Ok</button>
+
+            {isPostsLoading
+                ? <button type="button" className="btn custom btn-block btn-info margin_element_name animate__animated animate__pulse animate__infinite" onClick={submitHandler}>Loading...</button>
+                : <button type="button" className="btn custom btn-block btn-info margin_element_name " onClick={submitHandler}>  Okay  </button>
+
+            }
+
         </div>
     );
 };
