@@ -15,18 +15,18 @@ const StartChatButton = ({ nickname }) => {
     function submitHandler() {
         setisPostsLoading(true);
 
-        setTimeout(async () => {
 
-            fetch('http://Localhost:8000/chat/', {
-                method: "POST",
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ nickname }),
-            })
-            setisPostsLoading(false);
-        }, 3000)
+
+        fetch('http://Localhost:8000/chat/', {
+            method: "POST",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ nickname }),
+        })
+        setisPostsLoading(false);
+
 
     }
     return (
