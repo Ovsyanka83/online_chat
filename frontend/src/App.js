@@ -12,7 +12,6 @@ function App() {
     <Routes>
       <Route path='/' element={<EnterWindow />} />
       <Route path='/chat' element={<PageOnChat />} />
-
     </Routes>
   );
 }
