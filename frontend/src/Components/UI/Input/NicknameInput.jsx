@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
-import classes from "./NicknameInput.module.css"
+
 
 const NicknameInput = ({ onChange }) => {
 
@@ -10,10 +9,10 @@ const NicknameInput = ({ onChange }) => {
     }
 
     return (
-        <div className="input-group flex-nowrap margin_element_name">
+        <div className="input-group flex-nowrap margin_element_name ">
             <input
                 type="text"
-                className="form-control"
+                className="form-control maxWidthInut"
                 placeholder="Enter your name"
                 aria-label="Имя пользователя"
                 aria-describedby="addon-wrapping"

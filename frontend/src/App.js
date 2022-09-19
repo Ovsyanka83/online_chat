@@ -1,18 +1,18 @@
-import axios from 'axios';
-import { useState } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import EnterWindow from './Components/EnterWindow';
-import StartChatButton from './Components/UI/Button/StartChatButton';
-import NicknameInput from './Components/UI/Input/NicknameInput';
+import PageOnChat from './Components/Page/PageOnChat';
+
 
 
 
 function App() {
 
-
-
-
   return (
-    <EnterWindow />
+    <Routes>
+      <Route path='/' element={<EnterWindow />} />
+      <Route path='/chat' element={<PageOnChat />} />
+    </Routes>
   );
 }
 

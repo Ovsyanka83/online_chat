@@ -1,0 +1,27 @@
+.sideBg {
+    background-color: rgb(233, 247, 247);
+    width: 100%;
+    height: 100%;
+}
+
+
+.flexCentr {
+    display: flex;
+    justify-content: center;
+}
+
+.centralBlock {
+    background-color: white;
+    width: 70vh;
+    height: 80vh;
+    margin-top: 10vh;
+    border-radius: 30px;
+}
+
+.downBlockInCentral {
+    width: 70vh;
+    height: 20vh;
+    position: absolute;
+
+    top: 70vh;
+}

@@ -16,10 +16,8 @@ const EnterWindow = () => {
     return (
         <div className='loginWindow'>
             <div className='flexBox'>
-
                 <NicknameInput onChange={handleNameChange} />
-                <StartChatButton nickname={{ nickname }} />
-
+                <StartChatButton nickname={nickname} />
             </div>
         </div>
 
